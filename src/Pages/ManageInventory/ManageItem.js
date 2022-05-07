@@ -16,7 +16,7 @@ const ManageItem = ({item,handleDelete}) => {
                     </p>
                 </div>
                 <div >
-                    <button onClick={()=>handleDelete(item._id)} className="delete-button" >Delete</button>
+                    <button onClick={()=>handleDelete(item._id)} className="delete-button " >Delete</button>
                 </div>
             </div>
         </div>

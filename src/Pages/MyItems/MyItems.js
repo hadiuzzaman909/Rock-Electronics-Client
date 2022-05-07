@@ -24,7 +24,7 @@ const MyItems = () => {
         }
     }
     return (
-        <div id='items-manage-inventory'>
+        <div id='myItems-manage-inventory'>
             <h2 className='text-center mt-2 mb-3 item-title'>My Selected Items</h2>
             <div className='container'>
                 <div className='row'>

@@ -21,3 +21,9 @@
     color: rgb(15, 22, 28);
     background-color: rgb(252, 252, 252);
 }
+
+@media only screen and (max-width:576px) {
+    .addnew-main{
+        width: 370px !important;;
+    }
+}

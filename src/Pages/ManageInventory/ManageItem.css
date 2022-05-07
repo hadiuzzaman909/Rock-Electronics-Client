@@ -42,3 +42,15 @@
 .product-name-quantity{
     margin-left: 120px;
 }
+
+@media only screen and (max-width:576px) {
+    .product-name{
+        margin-left: 10px;
+    }
+    .product-name-quantity{
+        margin-left: 10px;
+    }
+    .review-item{
+        width:370px;
+    }
+}

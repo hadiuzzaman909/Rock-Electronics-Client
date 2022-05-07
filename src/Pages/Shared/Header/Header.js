@@ -26,7 +26,7 @@ const Header = () => {
                             </Nav>
                             <Nav>
                             {
-                                user?<Nav.Link className='navbarText text-dark fw-bold blog' as={Link} to="/home">Home</Nav.Link>:<Nav.Link className='navbarText text-dark fw-bold blog' as={Link} to="/home">Home</Nav.Link>
+                                user?<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/home">Home</Nav.Link>:<Nav.Link className='navbarText text-dark fw-bold' as={Link} to="/home">Home</Nav.Link>
                             }
                             </Nav>
                             <Nav>

@@ -1,10 +1,10 @@
 import React from 'react';
-
+import './MyItem.css'
 const MyItem = ({item,handleDelete}) => {
     const {name,img,description,price,_id,quantity,Supplier_name}=item;
     return (
         <div className='item'>
-            <img className='w-100 item-img' src={img} alt='' />
+            <img className='w-75 myItem-img ' src={img} alt='' />
             <h2>{name}</h2>
             <h5>Supplier: {Supplier_name}</h5>
             <h5>Quantity:{quantity}</h5>
