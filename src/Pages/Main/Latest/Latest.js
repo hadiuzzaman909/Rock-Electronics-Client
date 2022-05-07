@@ -5,7 +5,7 @@ const Latest = () => {
     const [latest, setLatest] = useState([])
 
     useEffect(() => {
-        fetch('Latest.json')
+        fetch('http://localhost:5000/latestItems')
             .then(res => res.json())
             .then(data => setLatest(data));
     }, [])

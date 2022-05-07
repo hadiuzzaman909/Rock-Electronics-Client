@@ -15,8 +15,11 @@ const Item = ({item}) => {
             <h5>Supplier: {Supplier_name}</h5>
             <h5>Quantity:{quantity}</h5>
             <p ><small>{description}</small></p>
-            <h4>Price: ${price}</h4>
+            <div className='item-footer d-flex justify-content-between'>
+            <h4 className='text-danger'>${price}</h4>
             <button onClick={()=>navigateToCheckOut(_id)} className='btn btn-info text-light'>Stock Update</button>
+            </div>
+
         </div>
     );
 };

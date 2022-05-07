@@ -1,0 +1,31 @@
+.service-img-latest{
+    width: 80%;
+    height:300px;
+    margin-left: 80px!important;
+
+
+}
+.button-latest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 240px;
+    background-color: rgb(255, 255, 255);
+
+    margin-bottom: 10px;
+    color: rgb(19, 23, 27);
+    height:40px;
+    border-radius: 10px;
+
+}
+@media only screen and (max-width:576px) {
+    .button-latest{
+        margin-left: 100px;
+        
+    }
+    .service-img-latest{
+        margin-left: 20px!important;
+        width:340px;
+        height:250px;
+    }
+}

@@ -9,7 +9,7 @@ const Banner = () => {
             <img className='img-mobile' src={ee2} alt=''/>
             <h2 className='banner-text'>Rock Electronics WareHouse</h2>
             <h4 className='banner-text2'>We Provide the best brands electronic gadgets</h4>
-            <button className='btn-banner'>Visit Client Site</button>
+            <button className='btn-banner'>Register Now</button>
         </div>
     );
 };

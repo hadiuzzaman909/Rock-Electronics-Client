@@ -1,6 +1,6 @@
 
 .header{
-    background-color: rgb(110, 176, 205);
+    background-color: #338EBB;
 }.blog{
     margin-left: 300px;
     color: rgb(223, 82, 82)! important;
@@ -10,7 +10,7 @@
 }
 .sign-out{
     font-weight: 700;
-    color:black;
+    color: aliceblue!important;
 }
 .title-head{
     
