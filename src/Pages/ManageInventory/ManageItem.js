@@ -1,7 +1,8 @@
 import React from 'react';
 import './ManageItem.css';
-const ManageItem = ({item}) => {
+const ManageItem = ({item,handleDelete}) => {
     const {name,img,price,quantity}=item;
+
     return (
         <div className='review-item mx-auto'>
             <div>
@@ -15,7 +16,7 @@ const ManageItem = ({item}) => {
                     </p>
                 </div>
                 <div >
-                    <button className="delete-button" >Delete</button>
+                    <button onClick={()=>handleDelete(item._id)} className="delete-button" >Delete</button>
                 </div>
             </div>
         </div>

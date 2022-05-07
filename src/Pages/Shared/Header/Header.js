@@ -47,7 +47,7 @@ const Header = () => {
                             </Nav>
                             <Nav>
                             {
-                                user?<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/myItems">My Items</Nav.Link>:<p></p>
+                                user?<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/myItem">My Items</Nav.Link>:<p></p>
                             }
                             </Nav>
 

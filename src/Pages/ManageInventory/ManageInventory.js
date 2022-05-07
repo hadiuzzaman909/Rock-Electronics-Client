@@ -11,6 +11,22 @@ const ManageInventory = () => {
             .then(res => res.json())
             .then(data => setitems(data));
     }, [])
+    const handleDelete=id=>{
+        const proceed=window.confirm('Are you sure?');
+        if(proceed){
+            const url=`http://localhost:5000/items/${id}`;
+            fetch(url,{
+                method:'DELETE'
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                const remaining=items.filter(item=>item._id !== id);
+                setitems(remaining);
+            })
+        }
+    }
+
+
     return (
         <div id='items-manage-inventory'>
             <h2 className='text-center mt-2 mb-3 item-title'>All Inventory Items</h2>
@@ -22,6 +38,7 @@ const ManageInventory = () => {
                             items.map(item => <ManageItem
                                 key={item._id}
                                 item={item}
+                                handleDelete={handleDelete}
                             ></ManageItem>)
                         }
                     </div>

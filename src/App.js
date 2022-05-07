@@ -6,6 +6,8 @@ import Register from './Pages/Authentication/Register/Register';
 import RequireAuth from './Pages/Authentication/RequireAuth/RequireAuth';
 import Home from './Pages/Home/Home';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
+import MyItems from './Pages/MyItems/MyItems';
+import MyItem from './Pages/MyItems/MyItems';
 import PageNotFound from './Pages/PageNotFound/PageNotFound';
 import Header from './Pages/Shared/Header/Header';
 import Stock from './Pages/Stock/Stock';
@@ -24,6 +26,11 @@ function App() {
         <Route path='/inventory/:_id' element={
         <RequireAuth>
         <Stock></Stock>
+        </RequireAuth>
+        }></Route>
+        <Route path='/myItem' element={
+        <RequireAuth>
+        <MyItems></MyItems>
         </RequireAuth>
         }></Route>
         <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
