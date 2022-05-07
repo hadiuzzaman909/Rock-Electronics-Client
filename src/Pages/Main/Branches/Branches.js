@@ -5,7 +5,7 @@ const Branches = () => {
     const [branches, setBranches] = useState([])
 
     useEffect(() => {
-        fetch('branch.json')
+        fetch('http://localhost:5000/marketPlace')
             .then(res => res.json())
             .then(data => setBranches(data));
     }, [])
