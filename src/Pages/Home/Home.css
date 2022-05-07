@@ -1,0 +1,16 @@
+.manage-inventories{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(99, 202, 190);
+    width: 300px;
+    margin-left: 600px;
+
+}
+@media only screen and (max-width:576px) {
+    .manage-inventories{
+        margin-left: 60px;
+    }
+}

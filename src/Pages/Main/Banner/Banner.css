@@ -1,0 +1,65 @@
+.image-banner{
+    width: 100%;
+    height: 650px;
+}
+.img-mobile{
+    display:none;
+}
+.banner-text{
+    position: absolute;
+    top:350px;
+    left:100px;
+    color: rgb(8, 19, 32);
+    font-family:Helvetica;
+}
+.banner-text2{
+    position: absolute;
+    top:400px;
+    left:50px;
+    color:azure; 
+}
+.btn-banner{
+    position: absolute;
+    top:450px;
+    left:200px;
+    border-radius: 20px;
+    width:200px;
+    color: tomato;
+    border: none;
+    height: 40px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:576px) {
+    .image-banner{
+    display:none ;
+    }
+    .img-mobile{
+        display: initial;
+        height: 200px;
+        width:390px;
+    }
+    .banner-text{
+        display: none;
+    }
+    .banner-text2{
+        position: absolute;
+        top:80px;
+        left:70px;
+        font-size: 10px;
+        color:black;
+    }
+    .btn-banner{
+        position: absolute;
+        top:100px;
+        left:150px;
+        width:100px;
+        color: tomato;
+        border: none;
+        height: 20px;
+        font-size: 10px;
+
+    }
+
+
+}

@@ -1,0 +1,28 @@
+.Register{
+    background-color: rgb(25, 106, 152);
+    border-radius: 30px;
+    height:610px;
+    width:500px;
+    padding: 20px;
+}
+
+.toggle-btn{
+    height:50px;
+}
+.toggle-btn2{
+    background-color: rgb(227, 239, 239);
+    height:50px;
+    color:rgb(12, 10, 10);
+
+}
+
+.btn-link{
+    text-decoration: none;
+    color:rgb(4, 6, 6);
+}
+@media only screen and (max-width:576px) {
+    .Register{
+        width: 350px;
+    }
+}
+

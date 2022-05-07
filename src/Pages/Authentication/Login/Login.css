@@ -1,0 +1,28 @@
+.Login{
+    background-color: rgb(24, 147, 147);
+    border-radius: 30px;
+    height:540px;
+    width:500px;
+    padding: 20px;
+}
+.toggle-btn{
+    height:50px;
+}
+.toggle-btn2{
+    background-color: rgb(227, 239, 239);
+    height:50px;
+    color:rgb(0, 0, 0);
+
+}
+
+.btn-link{
+    text-decoration: none;
+    color:rgb(6, 10, 10)! important;
+}
+
+@media only screen and (max-width:576px) {
+    .Login{
+        width: 350px;
+        height: 490px;
+    }
+}

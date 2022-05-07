@@ -1,0 +1,24 @@
+
+.header{
+    background-color: rgb(177, 220, 238);
+}.blog{
+    margin-left: 300px;
+    color: rgb(223, 82, 82)! important;
+}
+.login{
+    color: white! important;
+}
+.sign-out{
+    font-weight: 700;
+    color:black;
+}
+.title-head{
+    
+}
+
+@media only screen and (max-width:576px) {
+    .blog{
+        margin-left: 0px;
+        color: white! important;
+    }
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Macbook Air 13",
+        "price": "1000",
+        "quantity":15,
+        "Supplier_name":"Kalam",
+        "description": "Toucan,Harpy eagle,Hoatzin and many types of parrots contains this album.You can find the lifestyle and family system of Amazon,s birds by watching this photos",
+        "img": "https://photos5.appleinsider.com/gallery/46349-90400-MacBook-Air-blue-side-xl.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Gaming Mouse",
+        "price": "1200",
+        "description": " The Southern Ocean is home to the emperor penguins and wandering albatrosses, blue whales and fur seals. Some seal species hunt underwater and breed on land or on ice. ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCwhbRcqNpq6qg6W_tDJRXgSlr3wyHnRAe2A&usqp=CAU"
+    }
+]
