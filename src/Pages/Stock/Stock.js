@@ -15,12 +15,30 @@ const Stock = () => {
             .then(data => setitem(data))
     }, [])
 
+    const onSubmit = data => {
+        const proceed = window.confirm('Are you sure?');
+        console.log(data);
+        if (proceed) {
+            const url = 'http://localhost:5000/items';
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(res => res.json())
+                .then(result => { })
+
+        }
+
+    }
 
 
     return (
         <div>
-            <div className='stock d-flex  flex-column flex-md-row '>
-                <img className='stock-img w-50' src={item.img} alt=''></img>
+            <div className='stock d-flex  flex-sm-row flex-md-row '>
+                <img className='stock-img ' src={item.img} alt=''></img>
                 <h4 className='name-stock'>{item.name}</h4>
                 <h4 className='text-danger name-price'>Price: ${item.price}</h4>
                 <div className='description'>
@@ -56,12 +74,15 @@ const Stock = () => {
                         <p>{item.description3}</p>
                         <p>{item.description4}</p>
                     </div>
- 
+                    <form className='d-flex justify-content-between mt-3 form' onSubmit={handleSubmit(onSubmit)}>
+                        <input className='mb-3 input-quantity' placeholder='    restock the items' type="number" {...register("quantity")} />
+                        <input className='ReStoke mx-auto  bg-primary' type="submit" value='Restoke' />
+                    </form>
                     <button className='stock-btn mt-3 name-deliver'>Delivered</button>
                 </div>
 
             </div>
-            <Link to="/manageInventory"><button className='manage-inventories'>Manage Inventories</button></Link>
+            <Link to="/manageInventory"><button className='manage-inv'>Manage Inventories</button></Link>
         </div>
     );
 };
