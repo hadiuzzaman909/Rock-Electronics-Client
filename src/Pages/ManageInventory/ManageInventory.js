@@ -7,14 +7,14 @@ const ManageInventory = () => {
     const [items, setitems] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://intense-citadel-86628.herokuapp.com/items')
             .then(res => res.json())
             .then(data => setitems(data));
     }, [])
     const handleDelete=id=>{
         const proceed=window.confirm('Are you sure?');
         if(proceed){
-            const url=`http://localhost:5000/items/${id}`;
+            const url=`https://intense-citadel-86628.herokuapp.com/${id}`;
             fetch(url,{
                 method:'DELETE'
             })

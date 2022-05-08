@@ -5,14 +5,14 @@ const MyItems = () => {
     const [items, setitems] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/myItems')
+        fetch('https://intense-citadel-86628.herokuapp.com/myItems')
             .then(res => res.json())
             .then(data => setitems(data));
     }, [])
     const handleDelete=id=>{
         const proceed=window.confirm('Are you sure?');
         if(proceed){
-            const url=`http://localhost:5000/myItems/${id}`;
+            const url=`https://intense-citadel-86628.herokuapp.com/${id}`;
             fetch(url,{
                 method:'DELETE'
             })

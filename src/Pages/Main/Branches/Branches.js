@@ -5,7 +5,7 @@ const Branches = () => {
     const [branches, setBranches] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/marketPlace')
+        fetch('https://intense-citadel-86628.herokuapp.com/marketPlace')
             .then(res => res.json())
             .then(data => setBranches(data));
     }, [])

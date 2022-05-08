@@ -9,7 +9,7 @@ const AddNew = () => {
         const proceed = window.confirm('Are you sure?');
         console.log(data);
         if (proceed) {
-            const url = 'http://localhost:5000/items';
+            const url = 'https://intense-citadel-86628.herokuapp.com/items';
             fetch(url, {
                 method: 'POST',
                 headers: {

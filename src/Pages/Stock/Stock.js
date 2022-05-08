@@ -8,7 +8,7 @@ const Stock = () => {
     const [item, setitem] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/items/${_id}`;
+        const url = `https://intense-citadel-86628.herokuapp.com/items/${_id}`;
 
         fetch(url)
             .then(res => res.json())
@@ -19,7 +19,7 @@ const Stock = () => {
         const proceed = window.confirm('Are you sure?');
         console.log(data);
         if (proceed) {
-            const url = 'http://localhost:5000/items';
+            const url = ``;
             fetch(url, {
                 method: 'POST',
                 headers: {

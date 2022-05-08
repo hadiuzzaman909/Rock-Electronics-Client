@@ -5,7 +5,7 @@ const Latest = () => {
     const [latest, setLatest] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/latestItems')
+        fetch('https://intense-citadel-86628.herokuapp.com/latestItems')
             .then(res => res.json())
             .then(data => setLatest(data));
     }, [])
