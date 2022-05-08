@@ -1,4 +1,10 @@
 
+
+.myItem-img{
+    height:350px;
+    border-radius: 15px;
+}
+
 @media only screen and (max-width:576px) {
     .myItem-img{
         width:100%;

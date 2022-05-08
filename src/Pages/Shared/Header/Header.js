@@ -31,7 +31,7 @@ const Header = () => {
                             </Nav>
                             <Nav>
                             {
-                                user?<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/home">Blogs</Nav.Link>:<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/home">Blog</Nav.Link>
+                                user?<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/blogs">Blogs</Nav.Link>:<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/blogs">Blog</Nav.Link>
                             }
                             </Nav>
 
