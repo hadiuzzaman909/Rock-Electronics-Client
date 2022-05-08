@@ -12,6 +12,9 @@
 .item-img{
     height:230px;
 }
+.quantity{
+    color: rgb(28, 10, 159);
+}
 
 @media only screen and (max-width:576px) {
     .item{
