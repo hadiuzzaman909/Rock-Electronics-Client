@@ -6,7 +6,7 @@ const Stock = () => {
     const [item, setItem] = useState({});
     const [reload, setReload] = useState(true);
     // const [stock, setStock] = useState({});
-    const {quantity } = item;
+    // const {quantity } = item;
     useEffect(() => {
         const url = `https://intense-citadel-86628.herokuapp.com/items/${_id}`;
 
@@ -14,26 +14,6 @@ const Stock = () => {
             .then(res => res.json())
             .then(data => setItem(data))
     }, [reload])
-
-    const handleDelivered = () => {
-        const updateQuantity = parseInt(quantity) - 1; // *actually I want to decrise quantity by clicking Delivered button*
-
-        const url = `https://intense-citadel-86628.herokuapp.com/items/${_id}`;
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify(updateQuantity), // *I don't know it's right or wrong and it's so important*
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                setReload(!reload);
-                setItem(data);
-                console.log(data);
-            });
-    };
-
     const handleUpdateQuantity = event => {
         event.preventDefault();
         const proceed = window.confirm('Are you sure?');
@@ -58,6 +38,25 @@ const Stock = () => {
         }
 
     }
+
+    //for deliver button
+    const handleDelivered = () => {
+        const updateQuantity = parseInt(item.quantity) - 1;
+        const url = `https://intense-citadel-86628.herokuapp.com/items/${_id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(updateQuantity), 
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                setReload(!reload);
+                setItem(data);
+                console.log(data);
+            });
+    };
     return (
         <div>
             <div className='stock d-flex  flex-sm-row flex-md-row '>
