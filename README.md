@@ -1,6 +1,6 @@
 # Rock Electronics
 
-Project-Link: [Rock Electronics]().
+Project-Link: [Rock Electronics](https://warehouse-management-33fdd.web.app/).
 
 ## Short Description
 This projects is a warehouse management of Rock Electronics.Rock Electronics contains electrical products like TV,Washing machine,Blender,Microwave Oven,Mobile,Laptop etc.The company authority can manage their product by using this website.They can update their collection, modify products list and maintain it.Registered user can add new item and also has access to delete it.This website also provides latest gadgets section.In this section authority can up to date the global new products.Their has marketplace section to display the showrooms of Rock Electronics.
