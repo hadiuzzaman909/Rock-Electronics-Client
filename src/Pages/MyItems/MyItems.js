@@ -12,7 +12,7 @@ const MyItems = () => {
     const handleDelete=id=>{
         const proceed=window.confirm('Are you sure?');
         if(proceed){
-            const url=`https://intense-citadel-86628.herokuapp.com/${id}`;
+            const url=`https://intense-citadel-86628.herokuapp.com/myItems/${id}`;
             fetch(url,{
                 method:'DELETE'
             })
