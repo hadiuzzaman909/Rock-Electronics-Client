@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './Stock.css';
-import { useForm } from "react-hook-form";
 const Stock = () => {
-    const { register, handleSubmit } = useForm();
     const { _id } = useParams();
-    const [item, setitem] = useState({});
+    const [item, setItem] = useState({});
+    const [reload, setReload] = useState(true);
 
     useEffect(() => {
         const url = `https://intense-citadel-86628.herokuapp.com/items/${_id}`;
 
         fetch(url)
             .then(res => res.json())
-            .then(data => setitem(data))
-    }, [])
+            .then(data => setItem(data))
+    }, [reload])
 
-    const onSubmit = event => {
+    const handleUpdateQuantity = event => {
+        event.preventDefault();
         const proceed = window.confirm('Are you sure?');
         const newQuantity=event.target.number.value;
         console.log(newQuantity);
@@ -30,9 +30,9 @@ const Stock = () => {
             })
                 .then(res => res.json())
                 .then(result => {
-                   console.log('success',newQuantity);
-                   alert("Update Quantity Successfully");
-                   event.target.reset(); 
+                    setReload(!reload);
+                    setItem(result);
+                    console.log(result); 
                  })
 
         }
@@ -79,10 +79,15 @@ const Stock = () => {
                         <p>{item.description3}</p>
                         <p>{item.description4}</p>
                     </div>
-                    <form className='d-flex justify-content-between mt-3 form' onSubmit={handleSubmit(onSubmit)}>
+                    <form className='d-flex justify-content-between mt-3 form' onSubmit={handleUpdateQuantity}>
+                        <input className='mb-3 input-quantity' type='number' name='quantity' placeholder='    restock the items' required/>
+                        <input className='ReStoke mx-auto  bg-primary' type="submit" value='Restoke' />
+
+                    </form>
+                    {/* <form className='d-flex justify-content-between mt-3 form' onSubmit={handleSubmit(onSubmit)}>
                         <input className='mb-3 input-quantity' placeholder='    restock the items' type="text" name='number' {...register("quantity")} />
                         <input className='ReStoke mx-auto  bg-primary' type="submit" value='Restoke' />
-                    </form>
+                    </form> */}
                     <button className='stock-btn mt-3 name-deliver'>Delivered</button>
                 </div>
 
