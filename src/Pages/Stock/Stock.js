@@ -15,20 +15,25 @@ const Stock = () => {
             .then(data => setitem(data))
     }, [])
 
-    const onSubmit = data => {
+    const onSubmit = event => {
         const proceed = window.confirm('Are you sure?');
-        console.log(data);
+        const newQuantity=event.target.number.value;
+        console.log(newQuantity);
         if (proceed) {
-            const url = ``;
+            const url = `https://intense-citadel-86628.herokuapp.com/items/${_id}`;
             fetch(url, {
-                method: 'POST',
+                method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(newQuantity)
             })
                 .then(res => res.json())
-                .then(result => { })
+                .then(result => {
+                   console.log('success',newQuantity);
+                   alert("Update Quantity Successfully");
+                   event.target.reset(); 
+                 })
 
         }
 
@@ -75,7 +80,7 @@ const Stock = () => {
                         <p>{item.description4}</p>
                     </div>
                     <form className='d-flex justify-content-between mt-3 form' onSubmit={handleSubmit(onSubmit)}>
-                        <input className='mb-3 input-quantity' placeholder='    restock the items' type="number" {...register("quantity")} />
+                        <input className='mb-3 input-quantity' placeholder='    restock the items' type="text" name='number' {...register("quantity")} />
                         <input className='ReStoke mx-auto  bg-primary' type="submit" value='Restoke' />
                     </form>
                     <button className='stock-btn mt-3 name-deliver'>Delivered</button>
