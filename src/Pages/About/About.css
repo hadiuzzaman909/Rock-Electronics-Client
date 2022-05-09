@@ -1,0 +1,12 @@
+.about-title-rock{
+    margin-top: 50px;
+    margin-left:500px!important;
+}
+.about-title-rock h2{
+    color: rgb(187, 63, 87);
+}
+@media only screen and (max-width:576px) {
+    .about-title-rock{
+        margin-left:50px!important;
+    }
+}

@@ -1,4 +1,4 @@
-import logo from '../../../Images/logo.jpg';
+import logo from '../../../Images/logo3.png';
 import React from 'react';
 import { Container, Nav, Navbar} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -31,7 +31,12 @@ const Header = () => {
                             </Nav>
                             <Nav>
                             {
-                                user?<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/blogs">Blogs</Nav.Link>:<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/blogs">Blog</Nav.Link>
+                                user?<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/blogs">Blogs</Nav.Link>:<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/blogs">Blogs</Nav.Link>
+                            }
+                            </Nav>
+                            <Nav>
+                            {
+                                user?<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/about">About</Nav.Link>:<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/about">About</Nav.Link>
                             }
                             </Nav>
 

@@ -5,8 +5,6 @@ const Stock = () => {
     const { _id } = useParams();
     const [item, setItem] = useState({});
     const [reload, setReload] = useState(true);
-    // const [stock, setStock] = useState({});
-    // const {quantity } = item;
     useEffect(() => {
         const url = `https://intense-citadel-86628.herokuapp.com/items/${_id}`;
 
@@ -18,15 +16,16 @@ const Stock = () => {
         event.preventDefault();
         const proceed = window.confirm('Are you sure?');
         const newQuantity = parseInt(event.target.quantity.value);
+        const updatedQuantity={quantity:newQuantity};
         console.log(newQuantity);
         if (proceed) {
-            const url = `https://intense-citadel-86628.herokuapp.com/items/${_id}`;
+            const url = `https://intense-citadel-86628.herokuapp.com/restokeItems/${_id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
-                    'content-type': 'application/json'
+                    'content-type': 'application/json',
                 },
-                body: JSON.stringify(newQuantity)
+                body: JSON.stringify(updatedQuantity)
             })
                 .then(res => res.json())
                 .then(result => {
@@ -38,17 +37,17 @@ const Stock = () => {
         }
 
     }
-
     //for deliver button
     const handleDelivered = () => {
-        const updateQuantity = parseInt(item.quantity) - 1;
-        const url = `https://intense-citadel-86628.herokuapp.com/items/${_id}`;
+        const newDeliver = parseInt(item.quantity) - 1;
+        const updatedDeliver={deliver:newDeliver};
+        const url = `https://intense-citadel-86628.herokuapp.com/deliverItems/${_id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
             },
-            body: JSON.stringify(updateQuantity), 
+            body: JSON.stringify(updatedDeliver), 
         })
             .then((res) => res.json())
             .then((data) => {
