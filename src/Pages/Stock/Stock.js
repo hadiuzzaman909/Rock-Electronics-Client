@@ -5,7 +5,8 @@ const Stock = () => {
     const { _id } = useParams();
     const [item, setItem] = useState({});
     const [reload, setReload] = useState(true);
-
+    // const [stock, setStock] = useState({});
+    const {quantity } = item;
     useEffect(() => {
         const url = `https://intense-citadel-86628.herokuapp.com/items/${_id}`;
 
@@ -14,10 +15,29 @@ const Stock = () => {
             .then(data => setItem(data))
     }, [reload])
 
+    const handleDelivered = () => {
+        const updateQuantity = parseInt(quantity) - 1; // *actually I want to decrise quantity by clicking Delivered button*
+
+        const url = `https://intense-citadel-86628.herokuapp.com/items/${_id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(updateQuantity), // *I don't know it's right or wrong and it's so important*
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                setReload(!reload);
+                setItem(data);
+                console.log(data);
+            });
+    };
+
     const handleUpdateQuantity = event => {
         event.preventDefault();
         const proceed = window.confirm('Are you sure?');
-        const newQuantity=event.target.number.value;
+        const newQuantity = parseInt(event.target.quantity.value);
         console.log(newQuantity);
         if (proceed) {
             const url = `https://intense-citadel-86628.herokuapp.com/items/${_id}`;
@@ -32,14 +52,12 @@ const Stock = () => {
                 .then(result => {
                     setReload(!reload);
                     setItem(result);
-                    console.log(result); 
-                 })
+                    console.log(result);
+                })
 
         }
 
     }
-
-
     return (
         <div>
             <div className='stock d-flex  flex-sm-row flex-md-row '>
@@ -80,7 +98,7 @@ const Stock = () => {
                         <p>{item.description4}</p>
                     </div>
                     <form className='d-flex justify-content-between mt-3 form' onSubmit={handleUpdateQuantity}>
-                        <input className='mb-3 input-quantity' type='number' name='quantity' placeholder='    restock the items' required/>
+                        <input className='mb-3 input-quantity' type='number' name='quantity' placeholder='    restock the items' required />
                         <input className='ReStoke mx-auto  bg-primary' type="submit" value='Restoke' />
 
                     </form>
@@ -88,7 +106,7 @@ const Stock = () => {
                         <input className='mb-3 input-quantity' placeholder='    restock the items' type="text" name='number' {...register("quantity")} />
                         <input className='ReStoke mx-auto  bg-primary' type="submit" value='Restoke' />
                     </form> */}
-                    <button className='stock-btn mt-3 name-deliver'>Delivered</button>
+                    <button onClick={handleDelivered} className='stock-btn mt-3 name-deliver'>Delivered</button>
                 </div>
 
             </div>
