@@ -10,13 +10,19 @@
         justify-content: center;
     }
     .google-button{
-        width:50px !important;
-        margin-right: 10px!important;
+        width:100px !important;
+        margin-right: 0px!important;
     }
     .social-div{
-        margin-left: 20px !important;
+        margin-left: 50px !important;
     }
     .github-button{
-        width:50px !important;
+        width:100px !important;
     }
+}
+
+.social-div{
+    margin-left: 150px;
+    margin-right: 10px;
+
 }

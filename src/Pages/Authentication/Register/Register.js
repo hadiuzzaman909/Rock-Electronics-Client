@@ -62,15 +62,16 @@ const Register = () => {
                 </div>
 
                 <div className='d-flex justify-content-between'>
-                    <Button disabled={!agree} className='toggle-btn ' variant="light" type="submit">
+                    <Button disabled={!agree} className='toggle-btn mx-auto w-50 mb-2' variant="light" type="submit">
                         Submit
-                    </Button>
-                    <p className='mt-2'>Already have an account?</p>
-                    <Button className='toggle-btn2 ' variant="" type="button"><Link className='text-light btn-link' to='/login'>Login</Link>
                     </Button>
                 </div>
 
             </Form>
+            <div>
+                <p>Already have an account? <Link className='text-primary text-decoration-none' to='/login'> Please Login</Link></p>
+                
+            </div>
             <SocialLogin></SocialLogin>
         </div>
     );

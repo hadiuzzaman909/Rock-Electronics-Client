@@ -31,17 +31,16 @@ const SocialLogin = () => {
             <div className='mb-5 mt-3'>
                 <p className='text-center'>Sign In With Another Account</p>
 
-                <div className='social-media-signin'>
+                <div className=' d-flex'>
                     <div className='social-div'>
-                        <button onClick={() => signInWithGoogle()} className='google-button btn btn-light w-50 p-2 d-block mx-auto my-2  '>
-                            <img style={{ width: '30px' }} src={google} alt='' />
-                            <span className='mx-3 google'>Google Sign In</span>
+                        <button onClick={() => signInWithGoogle()} className='btn btn-light   d-block mx-auto  github-button '>
+                            <img className='' style={{ width: '40px' }} src={google} alt='' />
+                            
                         </button>
                     </div>
                     <div>
-                        <button onClick={() => signInWithGithub()} className='btn btn-light w-50 p-2 d-block mx-auto my-2 github-button '>
-                            <img style={{ width: '30px' }} src={github} alt='' />
-                            <span className='mx-3 github'>Github Sign In</span>
+                        <button onClick={() => signInWithGithub()} className='btn btn-light d-block mx-auto  github-button '>
+                            <img className='mx-auto' style={{ width: '40px' }} src={github} alt='' />
                         </button>
                         <p className='text-center'>{errorElement}</p>
                     </div>
