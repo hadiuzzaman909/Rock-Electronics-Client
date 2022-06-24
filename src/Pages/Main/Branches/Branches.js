@@ -11,7 +11,7 @@ const Branches = () => {
     }, [])
     return (
         <div id='branches'>
-            <h2 className='text-center mt-5 branches-title'>Our Marketplace</h2>
+            <h2 className='text-center mt-5 branches-title'>Marketplace</h2>
             <div id='branches' className='container'>
                 <div className='row'>
                     <div className='branches-container'>
