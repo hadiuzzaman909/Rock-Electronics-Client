@@ -12,14 +12,17 @@ import h2 from '../../../Images/brand/h2.png'
 import l from '../../../Images/brand/l.png'
 import p from '../../../Images/brand/p.png'
 import htc from '../../../Images/brand/htc.png'
-import s from '../../../Images/brand/s.png'
+import s3 from '../../../Images/brand/s3.png'
 import sa from '../../../Images/brand/sa.webp'
 import ca from '../../../Images/brand/ca.png'
 import hav from '../../../Images/brand/hav.png'
-import le from '../../../Images/brand/le.png'
+import de from '../../../Images/brand/de.png'
 import lo from '../../../Images/brand/lo.png'
 import ni2 from '../../../Images/brand/ni2.png'
 import hua from '../../../Images/brand/hua.png'
+import pan from '../../../Images/brand/pan.png'
+import len from '../../../Images/brand/len.png'
+
 
 const Branches = () => {
     return (
@@ -59,12 +62,14 @@ const Branches = () => {
 
 
           <SwiperSlide><img className="slider_img" src={hav} alt=''></img></SwiperSlide>
+          
+          <SwiperSlide><img className="slider_img" src={s3} alt=''></img></SwiperSlide>
 
-
+          <SwiperSlide><img className="slider_img" src={de} alt=''></img></SwiperSlide>
 
           <SwiperSlide> <img className="slider_img" src={lo} alt=''></img></SwiperSlide>
 
-          <SwiperSlide><img className="slider_img" src={le} alt=''></img></SwiperSlide>
+
           <SwiperSlide><img className="slider_img" src={hua} alt=''></img></SwiperSlide>
           <SwiperSlide><img className="slider_img" src={ni2} alt=''></img></SwiperSlide>
           <SwiperSlide><img className="slider_img" src={p} alt=''></img></SwiperSlide>
