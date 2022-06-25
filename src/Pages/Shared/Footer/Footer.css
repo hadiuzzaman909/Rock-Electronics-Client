@@ -1,0 +1,10 @@
+.fot{
+    background-color: #338EBB;
+}
+@media only screen and (max-width:576px) {
+    .res{
+        flex-direction: column;
+        margin-left: 100px;
+
+    }
+}

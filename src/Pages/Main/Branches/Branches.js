@@ -1,31 +1,79 @@
-import React, { useEffect, useState } from 'react';
-import Branch from '../Branch/Branch';
-import './Branches.css'
+import "./Branches.css";
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+
+
+
+// import required modules
+import { Pagination } from "swiper";
+import h2 from '../../../Images/brand/h2.png'
+import l from '../../../Images/brand/l.png'
+import p from '../../../Images/brand/p.png'
+import htc from '../../../Images/brand/htc.png'
+import s from '../../../Images/brand/s.png'
+import sa from '../../../Images/brand/sa.webp'
+import ca from '../../../Images/brand/ca.png'
+import hav from '../../../Images/brand/hav.png'
+import le from '../../../Images/brand/le.png'
+import lo from '../../../Images/brand/lo.png'
+import ni2 from '../../../Images/brand/ni2.png'
+import hua from '../../../Images/brand/hua.png'
+
 const Branches = () => {
-    const [branches, setBranches] = useState([])
-
-    useEffect(() => {
-        fetch('https://intense-citadel-86628.herokuapp.com/marketPlace')
-            .then(res => res.json())
-            .then(data => setBranches(data));
-    }, [])
     return (
-        <div id='branches'>
-            <h2 className='text-center mt-5 branches-title'>Marketplace</h2>
-            <div id='branches' className='container'>
-                <div className='row'>
-                    <div className='branches-container'>
-                        {
-                            branches.map(branch => <Branch
-                                key={branch.id}
-                                branch={branch}
-                            ></Branch>)
-                        }
-                    </div>
-                </div>
-
-            </div>
+        <>
+        <div>
+            <h1 className="text-center mt-5 mb-5">Brands</h1>
         </div>
+        <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+          <SwiperSlide><img className="slider_img" src={l} alt=''></img></SwiperSlide>
+
+          <SwiperSlide><img className="slider_img" src={htc} alt=''></img></SwiperSlide>
+          <SwiperSlide><img className="slider_img" src={sa} alt=''></img></SwiperSlide>
+
+          <SwiperSlide> <img className="slider_img" src={ca} alt=''></img></SwiperSlide>
+
+
+          <SwiperSlide><img className="slider_img" src={hav} alt=''></img></SwiperSlide>
+
+
+
+          <SwiperSlide> <img className="slider_img" src={lo} alt=''></img></SwiperSlide>
+
+          <SwiperSlide><img className="slider_img" src={le} alt=''></img></SwiperSlide>
+          <SwiperSlide><img className="slider_img" src={hua} alt=''></img></SwiperSlide>
+          <SwiperSlide><img className="slider_img" src={ni2} alt=''></img></SwiperSlide>
+          <SwiperSlide><img className="slider_img" src={p} alt=''></img></SwiperSlide>
+
+
+
+        </Swiper>
+      </>
+
     );
 };
 

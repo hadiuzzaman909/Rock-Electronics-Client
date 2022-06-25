@@ -1,21 +1,21 @@
-#branches{
-    background-color: #fef9f8;
+.slider_img{
+    height: 70px;
+    width:200px;
+    margin-bottom: 100px;
 }
-.branches-container{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 20px;
-}
-
-.branches-title{
- margin-left: 30px;
- margin-bottom: 50px;
+.mySwiper{
+    padding: 30px;
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 /* make services responsive */
 @media only screen and (max-width:576px) {
-    .branches-container{
-        grid-template-columns: repeat(1,1fr);
+    .slider_img{
+        height: 70px;
+        width:200px;
+        margin-left: 100px;
+
     }
 }
 
@@ -24,3 +24,4 @@
         grid-template-columns: repeat(2,1fr);
     }
 }
+

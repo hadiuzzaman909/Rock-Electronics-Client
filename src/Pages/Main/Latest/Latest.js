@@ -11,7 +11,7 @@ const Latest = () => {
     }, [])
     return (
         <div id='services' className='latest'>
-            <h2 className='text-center mt-5 service-title'>Latest Devices</h2>
+            <h2 className='text-center service-title'>Latest Devices</h2>
             <div id='services' className='container'>
                 <div className='row'>
                     <div className='latest-container'>

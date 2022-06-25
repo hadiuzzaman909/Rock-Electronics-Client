@@ -5,9 +5,9 @@ const Footer = () => {
     const year = today.getFullYear();
     return (
 
-        <div className='mt-5 bg-secondary bg-gradient text-light'>
+        <div className='mt-5 fot bg-gradient text-light'>
             <div className='container'>
-                <div className='row d-flex justify-content-between'>
+                <div className='d-flex flex-lg-row res justify-content-between'>
 
                     <div className='col-6 mt-5'>
                         <div className=''>
