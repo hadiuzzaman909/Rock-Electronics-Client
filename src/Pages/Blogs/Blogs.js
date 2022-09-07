@@ -3,7 +3,7 @@ import './Blogs.css'
 const Blogs = () => {
     return (
         <>
-        <h2 className='text-center'>Coming Soon</h2>
+        <h2 className='text-center mt-5'>Coming Soon</h2>
         </>
     );
 };

@@ -25,15 +25,17 @@ const AddNew = () => {
     }
     return (
         <div className='mx-auto w-50 addnew-main'>
-            <h2 className='text-center'>Add New Items</h2>
+            
             <div className='addNew'>
+            <h2 className='text-center'>Add New Item</h2>
                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                     <input className='mb-3 inputField' placeholder=' Name' {...register("name", { required: true, maxLength: 20 })} />
-                    <textarea className='mb-3 inputField-des'placeholder='Description'{...register("description")} />
+                    
                     <input className='mb-3 inputField'placeholder=' Price' type="number" {...register("price")} />
                     <input className='mb-3 inputField'placeholder=' Quantity' type="number" {...register("quantity")} />
                     <input className='mb-3 inputField'placeholder=' Supplier' {...register("Supplier_name")} />
                     <input className='mb-3 inputField'placeholder=' Photo URL' type='text' {...register("img")} />
+                    <textarea className='mb-3 inputField-des'placeholder='Description'{...register("description")} />
                     <input className='submit-addItem mx-auto mt-3' type="submit" value='Add Item' />
                 </form>
 

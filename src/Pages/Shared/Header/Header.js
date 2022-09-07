@@ -50,11 +50,11 @@ const Header = () => {
                                 user?<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/addNew">Add Items</Nav.Link>:<p></p>
                             }
                             </Nav>
-                            <Nav>
+                            {/* <Nav>
                             {
                                 user?<Nav.Link className='navbarText text-dark fw-bold ' as={Link} to="/myItem">My Items</Nav.Link>:<p></p>
                             }
-                            </Nav>
+                            </Nav> */}
 
                             <Nav>
                             {
